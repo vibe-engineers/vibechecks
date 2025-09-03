@@ -1,12 +1,9 @@
 """The main VibeCheck class and its functionalities."""
 
-import inspect
-from typing import Any, Callable
-
 from google import genai
 from openai import OpenAI
+from vibecore import VibeInputTypeException, VibeLlmClient, VibeLlmConfig
 
-from vibecore import VibeLlmClient, VibeLlmConfig, VibeInputTypeException
 from vibechecks.utils.logger import console_logger
 
 
@@ -36,33 +33,21 @@ class VibeCheck:
         """
         self.llm = VibeLlmClient(client, model, config, console_logger)
 
-    def __call__(self, arg: str | Callable[..., Any]) -> bool | Callable[..., Any]:
+    def __call__(self, arg: str) -> bool:
         """
-        Perform a vibe check on a statement or a function call.
-
-        If the argument is a string, it evaluates the statement's truthiness.
-        If the argument is a callable, it wraps the function to evaluate its
-        intended outcome based on its docstring and arguments.
+        Perform a vibe check on a string statement.
 
         Args:
-            arg: A string statement or a callable function.
+            arg: A string statement to evaluate.
 
         Returns:
-            If `arg` is a string, returns a boolean.
-            If `arg` is a callable, returns a wrapped function.
+            A boolean indicating whether the statement is true or false.
 
         Raises:
-            VibeInputTypeException: If the argument is not a string or a callable.
+            VibeInputTypeException: If the argument is not a string.
 
         """
         if isinstance(arg, str):
             return self.llm.vibe_eval_statement(arg)
-        elif callable(arg):
-            def wrapper(*args, **kwargs):
-                func_signature = inspect.signature(arg)
-                docstring = inspect.getdoc(arg)
-                return self.llm.vibe_call_function(func_signature, docstring, *args, **kwargs)
-
-            return wrapper
         else:
-            raise VibeInputTypeException("Argument must be a string or a callable")
+            raise VibeInputTypeException("Argument must be a string")
