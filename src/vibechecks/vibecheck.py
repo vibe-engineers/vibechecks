@@ -2,7 +2,7 @@
 
 from google import genai
 from openai import OpenAI
-from vibecore import VibeInputTypeException, VibeLlmClient, VibeLlmConfig
+from vibecore import VibeInputTypeException, VibeLlmClient, VibeConfig
 
 from vibechecks.utils.logger import console_logger
 
@@ -20,7 +20,7 @@ class VibeCheck:
         client: OpenAI | genai.Client,
         model: str,
         *,
-        config: VibeLlmConfig | dict | None = None,
+        config: VibeConfig | dict | None = None,
     ) -> None:
         """
         Initialize the VibeCheck object.
