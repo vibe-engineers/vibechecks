@@ -1,5 +1,5 @@
 """Logging utilities for VibeChecks."""
 
-from vibecore import ConsoleLogger
+from vibecore._internal import ConsoleLogger
 
 console_logger = ConsoleLogger("VibeChecks")

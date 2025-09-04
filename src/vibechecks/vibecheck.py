@@ -2,7 +2,8 @@
 
 from google import genai
 from openai import OpenAI
-from vibecore import VibeConfig, VibeInputTypeException, VibeLlmClient
+from vibecore import VibeConfig, VibeInputTypeException
+from vibecore._internal import VibeLlmClient
 
 from vibechecks.utils.logger import console_logger
 
