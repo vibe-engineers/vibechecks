@@ -25,7 +25,7 @@ authors = [
   { name="tjtanjin", email="cjtanjin@gmail.com" },
   { name="konglyyy", email="kongleyi99@gmail.com" },
 ]
-description = "Bring vibes into your code: LLM-powered if-statements, loops, and functions."
+description = "Bring vibes into your code: LLM-powered if-statements and loops!"
 readme = "README.md"
 requires-python = ">=3.0"
 classifiers = [
