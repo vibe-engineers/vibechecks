@@ -1,10 +1,10 @@
 <p align="center">
-  <img width=300 src="https://raw.githubusercontent.com/konglyyy/vibechecks/main/assets/vibechecks.png" />
+  <img width=300 src="https://raw.githubusercontent.com/vibe-engineers/vibechecks/main/assets/vibechecks.png" />
   <h1 align="center">VibeChecks</h1>
 </p>
 
 <p align="center">
-  <a href="https://github.com/konglyyy/vibechecks/actions/workflows/ci-cd-pipeline.yml"> <img src="https://github.com/konglyyy/vibechecks/actions/workflows/ci-cd-pipeline.yml/badge.svg" /> </a>
+  <a href="https://github.com/vibe-engineers/vibechecks/actions/workflows/ci-cd-pipeline.yml"> <img src="https://github.com/vibe-engineers/vibechecks/actions/workflows/ci-cd-pipeline.yml/badge.svg" /> </a>
 </p>
 
 ## Table of Contents
@@ -39,7 +39,7 @@ else:
 ```bash
 python3 -m pip install vibechecks
 ```
-Details on the usage of the package and available APIs can be found on the [**wiki page**](https://github.com/konglyyy/vibechecks/wiki).
+Details on the usage of the package and available APIs can be found on the [**wiki page**](https://github.com/vibe-engineers/vibechecks/wiki).
 
 ### Features
 - **Natural Language Conditions**: Use natural language to check for conditions, making your code more readable and intuitive.
@@ -60,7 +60,7 @@ Python
 
 ##### Project Repository
 ```
-https://github.com/konglyyy/vibechecks
+https://github.com/vibe-engineers/vibechecks
 ```
 
 ### Team
@@ -68,9 +68,9 @@ https://github.com/konglyyy/vibechecks
 * [Tan Jin](https://github.com/tjtanjin)
 
 ### Contributing
-If you are looking to contribute to the project, you may find the [**Developer Guide**](https://github.com/konglyyy/vibechecks/blob/main/docs/DeveloperGuide.md) useful.
+If you are looking to contribute to the project, you may find the [**Developer Guide**](https://github.com/vibe-engineers/vibechecks/blob/main/docs/DeveloperGuide.md) useful.
 
-In general, the forking workflow is encouraged and you may open a pull request with clear descriptions on the changes and what they are intended to do (enhancement, bug fixes etc). Alternatively, you may simply raise bugs or suggestions by opening an [**issue**](https://github.com/konglyyy/vibechecks/issues) or raising it up on [**discord**](https://discord.gg/dBW35GBCPZ).
+In general, the forking workflow is encouraged and you may open a pull request with clear descriptions on the changes and what they are intended to do (enhancement, bug fixes etc). Alternatively, you may simply raise bugs or suggestions by opening an [**issue**](https://github.com/vibe-engineers/vibechecks/issues) or raising it up on [**discord**](https://discord.gg/dBW35GBCPZ).
 
 Note: Templates have been created for pull requests and issues to guide you in the process.
 

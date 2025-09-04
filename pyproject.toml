@@ -35,8 +35,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/konglyyy/vibechecks"
-Issues = "https://github.com/konglyyy/vibechecks/issues"
+Homepage = "https://github.com/vibe-engineers/vibechecks"
+Issues = "https://github.com/vibe-engineers/vibechecks/issues"
 
 [tool.ruff]
 line-length = 120
