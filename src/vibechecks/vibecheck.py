@@ -1,7 +1,7 @@
 """The main VibeCheck class and its functionalities."""
 
-from vibetools.config import VibeConfig
 from vibetools._internal import VibeLlmClient
+from vibetools.config import VibeConfig
 
 from vibechecks.utils.logger import console_logger
 
