@@ -30,6 +30,4 @@ jobs:
     # Triggers the full CI/CD pipeline.
     name: CI
     uses: ./.github/workflows/lint-build-test.yml
-    with:
-      target_env: ${{ github.ref == 'refs/heads/main' && 'production' || github.ref == 'refs/heads/development' && 'development' || 'invalid' }}
     secrets: inherit

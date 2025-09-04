@@ -3,16 +3,11 @@ run-name: Lint, Build & Publish
 
 on:
   workflow_call:
-    inputs:
-      target_env:
-        required: true
-        type: string
 
 jobs:
   lint:
     name: Run Lint
     runs-on: ubuntu-latest
-    environment: ${{ inputs.target_env }}
     steps:
       - name: Checkout code
         # Checks out the repository code.
@@ -45,7 +40,6 @@ jobs:
     needs: lint
     name: Build Package
     runs-on: ubuntu-latest
-    environment: ${{ inputs.target_env }}
     outputs:
       # Exposes the TARGET_TAG output from the 'vars' step.
       target_tag: ${{ steps.vars.outputs.TARGET_TAG }}
@@ -82,7 +76,6 @@ jobs:
     needs: build
     name: Run Tests
     runs-on: ubuntu-latest
-    environment: ${{ inputs.target_env }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
