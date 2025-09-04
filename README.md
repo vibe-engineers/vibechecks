@@ -16,7 +16,7 @@
 * [Others](#others)
 
 ### Introduction
-**VibeChecks** is a lightweight python package that allows users to use natural language (LLMs) as part of their code logic. For example, **VibeChecks** can be used to check if/loop statements as well as provide responses for functions that are described but not implemented. It supports OpenAI and Google Gemini client currently and asimple example illustrating how it can be used can be seen below:
+**VibeChecks** is a lightweight python package that allows users to use natural language (LLMs) as part of their code logic. For example, **VibeChecks** can be used to check if/loop statements as well as provide responses for functions that are described but not implemented. It supports OpenAI and Google Gemini client currently and a simple example illustrating how it can be used can be seen below:
 ```python
 from google import genai
 from vibechecks import VibeCheck
