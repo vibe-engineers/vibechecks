@@ -15,9 +15,9 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 # model variants for gemini: https://ai.google.dev/gemini-api/docs/models#model-variations
 vc = VibeCheck(client, model="gemini-2.0-flash-lite")
 
-# the example below asks user for a number and vibechecks if the number is prime
-user_input = input("Enter a number:")
-if vc(f"{user_input} is a prime number"):
-    print(f"{user_input} is a prime number!")
+# the example below asks user for a dog breed and checks if it is valid
+user_input = input("Enter a dog breed:")
+if vc(f"{user_input} is a valid dog breed"):
+    print(f"{user_input} is a valid dog breed!")
 else:
-    print(f"{user_input} is not a prime number.")
+    print(f"{user_input} is not a valid dog breed!")
