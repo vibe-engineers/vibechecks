@@ -1,6 +1,6 @@
 """The main VibeCheck class and its functionalities."""
 
-from vibetools import VibeConfig, VibeInputTypeException
+from vibetools.config import VibeConfig
 from vibetools._internal import VibeLlmClient
 
 from vibechecks.utils.logger import console_logger
@@ -42,11 +42,5 @@ class VibeCheck:
         Returns:
             A boolean indicating whether the statement is true or false.
 
-        Raises:
-            VibeInputTypeException: If the argument is not a string.
-
         """
-        if isinstance(arg, str):
-            return self.llm.vibe_eval(arg, bool)
-        else:
-            raise VibeInputTypeException("Argument must be a string")
+        return self.llm.vibe_eval(arg, bool)
