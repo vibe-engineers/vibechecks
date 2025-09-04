@@ -1,7 +1,5 @@
 """The main VibeCheck class and its functionalities."""
 
-from google import genai
-from openai import OpenAI
 from vibetools import VibeConfig, VibeInputTypeException
 from vibetools._internal import VibeLlmClient
 
@@ -18,7 +16,7 @@ class VibeCheck:
 
     def __init__(
         self,
-        client: OpenAI | genai.Client,
+        client: VibeLlmClient,
         model: str,
         *,
         config: VibeConfig | dict | None = None,
@@ -27,7 +25,7 @@ class VibeCheck:
         Initialize the VibeCheck object.
 
         Args:
-            client: An instance of `openai.OpenAI` or `genai.Client`.
+            client: An instance of VibeLlmClient.
             model: The name of the model to use for the LLM.
             config: VibeCheckConfig containing runtime knobs (e.g., num_tries).
 
