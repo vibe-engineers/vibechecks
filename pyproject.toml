@@ -22,6 +22,7 @@ pythonpath = [
 name = "vibechecks"
 version = "0.1.0"
 authors = [
+  { name="vibe-engineers", email="vibe-engineers@gmail.com" },
   { name="tjtanjin", email="cjtanjin@gmail.com" },
   { name="konglyyy", email="kongleyi99@gmail.com" },
 ]
