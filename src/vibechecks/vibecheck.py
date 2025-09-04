@@ -2,7 +2,7 @@
 
 from google import genai
 from openai import OpenAI
-from vibecore import VibeInputTypeException, VibeLlmClient, VibeConfig
+from vibecore import VibeConfig, VibeInputTypeException, VibeLlmClient
 
 from vibechecks.utils.logger import console_logger
 
@@ -48,6 +48,6 @@ class VibeCheck:
 
         """
         if isinstance(arg, str):
-            return self.llm.vibe_eval_statement(arg)
+            return self.llm.vibe_eval(arg, bool)
         else:
             raise VibeInputTypeException("Argument must be a string")
