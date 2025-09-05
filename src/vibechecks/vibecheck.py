@@ -1,8 +1,8 @@
 """The main VibeCheck class and its functionalities."""
 
 from vibetools._internal import VibeLlmClient
-from vibetools.config import VibeConfig
 
+from vibechecks.config.config import VibeCheckConfig
 from vibechecks.utils.logger import console_logger
 
 
@@ -19,7 +19,7 @@ class VibeCheck:
         client: VibeLlmClient,
         model: str,
         *,
-        config: VibeConfig | dict | None = None,
+        config: VibeCheckConfig | dict | None = None,
     ) -> None:
         """
         Initialize the VibeCheck object.
@@ -30,6 +30,11 @@ class VibeCheck:
             config: VibeCheckConfig containing runtime knobs (e.g., num_tries).
 
         """
+        if config is None:
+            config = VibeCheckConfig()
+        elif isinstance(config, dict):
+            config = VibeCheckConfig(**config)
+
         self.llm = VibeLlmClient(client, model, config, console_logger)
 
     def __call__(self, arg: str) -> bool:
