@@ -2,7 +2,7 @@
 
 from typing import Any
 
-from vibetools.config import VibeConfig
+from vibetools._internal import VibeConfig
 
 
 class VibeCheckConfig(VibeConfig):

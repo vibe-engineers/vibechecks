@@ -4,6 +4,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
+from vibechecks.config.config import VibeCheckConfig
 from vibechecks.utils.logger import console_logger
 from vibechecks.vibecheck import VibeCheck
 
@@ -22,7 +23,7 @@ def test_vibecheck_init(mock_vibe_llm_client: Mock):
 
     client = Mock()
     model = "test-model"
-    config = {"num_tries": 3}
+    config = VibeCheckConfig()
 
     vibe_check = VibeCheck(client, model, config=config)
 
