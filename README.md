@@ -5,6 +5,11 @@
 
 <p align="center">
   <a href="https://github.com/vibe-engineers/vibechecks/actions/workflows/ci-cd-pipeline.yml"> <img src="https://github.com/vibe-engineers/vibechecks/actions/workflows/ci-cd-pipeline.yml/badge.svg" /> </a>
+  <a href="https://pypi.org/project/vibechecks/"><img src="https://img.shields.io/pypi/v/vibechecks.svg" /></a>
+  <a href="https://pypi.org/project/vibechecks/"><img src="https://img.shields.io/pypi/pyversions/vibechecks.svg" /></a>
+  <a href="https://github.com/vibe-engineers/vibechecks/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/vibechecks.svg" /></a>
+  <a href="https://pepy.tech/project/vibechecks"><img src="https://pepy.tech/badge/vibechecks" /></a>
+  <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 </p>
 
 ## Table of Contents
