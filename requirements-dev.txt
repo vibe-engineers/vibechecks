@@ -4,6 +4,7 @@ pytest==8.0.0
 build==1.3.0
 black==25.1.0
 hatch==1.14.0
+click==8.2.2  # added because of: https://github.com/pypa/hatch/issues/2052
 ruff==0.11.2
 darglint==1.8.1
 python-dotenv==1.1.1
