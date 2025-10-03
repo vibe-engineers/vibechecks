@@ -40,9 +40,6 @@ jobs:
     needs: lint
     name: Build Package
     runs-on: ubuntu-latest
-    outputs:
-      # Exposes the TARGET_TAG output from the 'vars' step.
-      target_tag: ${{ steps.vars.outputs.TARGET_TAG }}
     steps:
       - name: Checkout repository
         # Checks out the code again (for this separate job).
@@ -102,5 +99,3 @@ jobs:
         run: |
           source venv/bin/activate
           hatch run test
-
-
