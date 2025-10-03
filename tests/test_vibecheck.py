@@ -47,6 +47,17 @@ def test_vibecheck_call(mock_vibe_llm_client: Mock):
     mock_llm_instance.vibe_eval.assert_called_once_with(statement, bool)
     assert result is True
 
+def test_vibecheck_call_str_arg(mock_vibe_llm_client: Mock):
+    """ Tests if __call__ method of VibeCheck accepts only strings."""
+    mock_llm_instance = Mock()
+    mock_llm_instance.vibe_eval.return_value = True
+    mock_vibe_llm_client.return_value = mock_llm_instance
+
+    vibe_check = VibeCheck(Mock(), "test-mosdel")
+    statement = 23
+    
+    assert isinstance(statement, str), "arg should be a String str"
+    
 
 def test_vibecheck_call_false(mock_vibe_llm_client: Mock):
     """Test the __call__ method of VibeCheck when vibe_eval returns False."""
